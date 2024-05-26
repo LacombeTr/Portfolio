@@ -1,0 +1,98 @@
+<div class="container">
+    <h1>Mon CV</h1>
+
+    <div class="section">
+        <div class="experience">
+            <h2 class="experience-title interest">Experiences professionnelles</h2>
+        </div>
+        <div *ngFor="let workexperience of workexperiences" class="experience">
+            <h3 class="experience-title"> {{ workexperience.title}} </h3>
+            <p class="experience-society">{{ workexperience.society }}</p>
+            <p class="experience-date">{{ workexperience.date }}</p>
+            <p *ngIf="workexperience.description" class="experience-description" [innerHTML]="workexperience.description"></p>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="experience">
+            <h2 class="experience-title interest">Diplômes</h2>
+        </div>
+        <div *ngFor="let diploma of education" class="experience">
+            <h3 class="experience-title"> {{ diploma.title}} </h3>
+            <p class="experience-date">{{ diploma.date }}</p>
+            <p class="experience-society">{{ diploma.society }}</p>
+            <div *ngIf="diploma.description" class="experience-description" [innerHTML]="diploma.description"></div>
+        </div>
+    </div>
+</div>
+
+<div class="skills panel">
+    <div class="grid-container-2">
+        <div id="techs">
+            <h2>Technologies</h2>
+            <div class="content">
+                <div class="collapsible-container">
+                    <div class="head-collapsible">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" />
+                    </div>
+                    
+                    <div class="head-collapsible">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materializecss/materializecss-original.svg" />
+                    </div>
+                    
+                    <div class="head-collapsible">
+                        <img class="head" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
+                    </div>
+                    
+                    <div class="head-collapsible">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" />
+                    </div>
+                    
+                    <div class="head-collapsible">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-plain.svg" />
+                    </div>
+                    <div class="head-collapsible">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" />
+                    </div>
+        
+                    <div class="head-collapsible">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+        <div id="outils">
+            <h2>Outils</h2>
+            <div class="content">
+                <div class="collapsible-container">
+                    <div class="head-collapsible">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codepen/codepen-original-wordmark.svg" />
+                    </div>
+    
+                    <div class="head-collapsible">
+                        <img class="head" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+                        <img class="head" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
+                    </div>
+    
+                    <div class="head-collapsible">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-plain.svg" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-plain.svg" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/latex/latex-original.svg" />
+                    </div>
+    
+                    <div class="head-collapsible">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

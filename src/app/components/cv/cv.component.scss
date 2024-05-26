@@ -1,0 +1,90 @@
+@import '../../../styles.scss';
+
+
+    // *{
+    //     border: dashed 1px #ff00f2 ;
+    // }
+
+.section{
+    display: flex;
+    flex-direction: column;
+
+    margin-block: 3rem;
+
+    width: 50vw;
+
+    .experience{
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    .experience-date{
+        font-style: italic;
+        font-weight: 100;
+    }
+
+    .experience-society{
+        font-weight: 400;
+    }
+
+    .exprience-title, .experience-date, .experience-society, .experience-description{
+        border-left: 1px solid black;
+    }
+
+    h2{
+        margin: 0;
+        padding: 1rem;
+        padding-left: 0;
+
+        font-size: 3.2rem;
+        text-align: center;
+    }
+
+    h3{
+        padding: 1rem;
+        padding-left: 0;
+        margin: 0;
+    }
+    
+    p{
+        margin: 0;
+        padding: 1rem;
+        padding-left: 3rem;
+    }
+
+    .line-counter{
+        display: flex;
+
+        align-items: center;
+        justify-content: left;
+
+        padding: 1rem;
+
+        width: 5rem;
+
+        text-align: center;
+    }
+}
+
+.content{
+    display: flex;
+    align-items: center;
+
+    height: 75vh;
+    width: 100%;
+}
+
+#techs, #outils, #skills{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: left;
+
+    margin-inline: 2rem;
+    
+    h2{
+        text-align: center;
+    }
+}

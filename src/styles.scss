@@ -1,1 +1,437 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+
+$blanc: #f7f1ee;
+$gris: #262626;
+$orange: #f48225;
+$light-orange: #ffe2ca;
+
+html{
+    font-size: 62.5%;
+}
+
+*{
+    box-sizing: border-box;
+    // border: #f200ff 1px dashed;
+}
+
+body{
+    margin: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: $blanc;
+}
+
+h1{
+    font-family: Sometype Mono;
+    font-size: 80px;
+    font-weight: 700;
+    
+    color: $gris;
+}
+
+h2{
+    font-family: Sometype Mono;
+    font-size: 32px;
+    font-weight: 500;
+    
+    color: $gris;
+}
+
+h3{
+    font-family: Sometype Mono;
+    font-size: 24px;
+    font-weight: 500;
+
+    color: $gris;
+}
+
+p{
+    font-family: Roboto condensed;
+    font-size: 1.6rem;
+    font-weight: 300;
+
+    color: $gris;
+}
+
+.container{
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 6rem;
+
+    height: auto;
+    min-height: 95vh;
+    width: 100vw;
+}
+
+.mention{
+    font-size: 1rem !important;
+    font-style: italic;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.right-text-align{
+    text-align: right;
+}
+
+.interest{
+    color: $orange;
+}
+
+.precisions{
+    padding-left: 2rem;
+
+    border-left: 1px solid black;
+
+    font-style: italic;
+}
+
+.panel{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+    height: auto;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10rem;
+
+    height: 75%;
+}
+
+.grid-container-2{
+    display: grid;
+    grid-template-columns: 25vw 25vw;
+
+    gap: 4rem;
+
+    height: auto;
+}
+
+.collapsible-container{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: auto;
+
+    align-items: center;
+    justify-content: center;
+
+    .head-collapsible{
+        display: flex;
+
+        align-items: end;
+        justify-content: space-evenly;
+
+        margin-block: 1rem;
+
+        width: 100%;
+
+        transition: all 0.25s ease-in;
+
+        *{
+            transition: all 0.25s ease-in;
+        }
+
+        & img{
+            height: 70px;
+            width: 70px;
+
+            z-index: 2;
+        }
+
+        .collapsible-item{
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+
+            width: 70px;
+
+            img{
+                height: 35px;
+                width: 35px;
+            };
+
+            p{
+                margin: 0;
+                margin-top: 0.25rem;
+                
+                text-align: center;
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+
+.photoCard{
+    position: relative;
+    
+    display: flex;
+
+    width: 20vw;
+    height: 500px;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    *{
+        transition: all 0.25s ease-in-out;
+    }
+
+    .bgImage{
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        height: 100%;
+        width: 100%;
+
+        object-fit: cover;
+    }
+
+    .ligthener{
+        position: absolute;
+        top: 0;
+        left: 0;
+    
+        display: flex;
+    
+        height: 100%;
+        width: 100%;
+    }
+    
+    .textContainer{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    
+        display: flex;
+        flex-direction: column;
+    
+        align-items: center;
+    
+        width: 100%;
+        height: 50%;
+    
+        transform-origin: bottom left;
+        transform: translateY(100%);
+    
+        z-index: 2;
+    }
+    
+    .cardTitle{
+        padding-inline: 3rem;
+        padding-block: 1rem;
+    
+        transform: translateY(2.25rem);
+    
+        background-color: $blanc;
+
+        border-radius: 10px;
+        // border: black solid 1px;
+    }
+    
+    .descriptionText{
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+        padding-inline: 2rem;
+    
+        margin: 0;
+    
+        width: 100%;
+        height: 82%;
+    
+        background-color: $blanc;
+        // border: $gris solid 1px;
+    
+        text-align: center;
+        overflow: hidden;
+    }
+    
+    h3{
+        margin: 0;
+        padding: 2rem;
+    
+        text-align: center;
+    }
+}
+
+.blob-container{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+
+    filter: blur(30px);
+
+    z-index: -30;
+
+    .blob{
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        height: 50vh;
+
+        fill: $light-orange;
+    }
+}
+
+.language-chip{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-inline: 0.5rem ;
+
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+
+    height: 2.5rem;
+    min-width: 8rem;
+
+    border-radius: 1.25rem;
+
+    background-color: $gris;
+
+    font-family: Sometype Mono;
+    font-size: 1.6rem;
+    color: $blanc;
+
+    i{
+        padding-right: 1rem;
+    }
+}
+
+.btnBelow{
+    margin-block: 2rem;
+    padding-inline: 3rem;
+
+    height: 50px;
+    width:fit-content;
+
+    background-color: $orange;
+    border-radius: 25px;
+    border: solid 2px $orange;
+
+    font-family: 'Roboto Condensed';
+    font-weight: 300;
+    font-size: 2.4rem;
+    color: $gris;
+
+    &:hover{
+        background-color: transparent;
+        color: $orange;
+    }
+
+    &:disabled{
+        background-color: transparent;
+        border-color: #bababa;
+        color: #bababa;
+    }
+}
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    font-family: Roboto Condensed;
+    font-size: 2rem;
+    font-weight: 200;
+
+    z-index: 10;
+
+    background-color: $blanc;
+
+    ul{
+        display: flex;
+        
+        flex-direction: row;
+
+        justify-content: space-evenly;
+
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+
+        li{
+            display: flex;
+
+            align-items: center;
+
+            margin: 0.5rem;
+            height: 4rem;
+            
+            a{
+                display: flex;
+                
+                flex-direction: column;
+                text-decoration: none;
+                
+                &:any-link{
+                    color: $gris;
+                }
+
+                &:after{
+                    content: "";
+                    background-color: $orange;
+                    height: 3px;
+                    width: 0px;
+
+                    transition: 0.25s ease-in;
+                }
+
+                &:hover:after{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    
+    height: 40px;
+    width: 100vw;
+    
+    p{
+        font-family: Roboto Condensed;
+        font-size: 1.25rem;
+        font-weight: 100;
+    }
+
+    img{
+        height: 20px;
+    }
+}

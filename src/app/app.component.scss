@@ -1,0 +1,23 @@
+@import '../styles.scss';
+
+.socials{
+    position: fixed;
+    bottom: 1.5rem;
+    right: 0.5rem;
+
+    font-size: 2.5rem;
+
+    z-index: 10;
+
+    color: $gris !important;
+
+    a{
+        &:any-link{
+            color: $gris !important;
+        }
+    }
+}
+
+a{
+    margin-inline: 1rem;
+}

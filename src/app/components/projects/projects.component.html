@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Projets</h1>
+    <p>Quelques projets sur lesquels j'ai travaillé.</p>
+    <div class="grid-container-2">
+
+        <div *ngFor="let project of projects" #cardFolio (mouseenter)="hoverInCardFolio(cardFolio)" (mouseleave)="hoverOutCardFolio(cardFolio)" class="portfolioCard">
+            <img class="bgImage" [src]="project.pic" alt="">
+            <div class="ligthener"></div>
+            <div class="textContainer">
+                <h3 class="cardTitle">{{ project.title }}</h3>
+                <div class="descriptionText">
+                    <p>{{ project.desc }}</p>
+                    <div class="chips">
+                        <span *ngFor="let tech of project.techs" [innerHTML]=" tech | languageChips "></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

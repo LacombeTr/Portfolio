@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>Photographie</h1>
+    <div class="grid-container">
+        <div *ngFor="let photo of listPhoto" #photoCard (mouseenter)="hoverInCard(photoCard)" (mouseleave)="hoverOutCard(photoCard)" class="photoCard">
+            <img [src]="photo.pic" class="bgImage">
+            <div class="ligthener"></div>
+            <div class="textContainer">
+                <h3 class="cardTitle">{{ photo.title }}</h3>
+                <p class="descriptionText">{{ photo.description }}</p>
+            </div>
+        </div>
+    </div>
+    <h2 class="interest">Prix</h2>
+    <p>Je vous propose mes services de photographe sur vos évenements ou pour des shooting privés.</p>
+    <div class="grid-container-2">
+        <p>Soirée spectacle/Concert <br> <span class="precisions">+ Backstages (supplément)</span> <br> <span class="mention">100 à 300 photos livrées sous 5 jours</span> </p> <p class="right-text-align">70 € <br> + 30 €</p>
+
+        <p>Shooting extérieur <br> <span class="precisions">+ possibilité plusieurs personnes </span> <br> <span class="mention">Shooting de 1 à 2h - 30 photos livrées sous 2 jours</span></p><p class="right-text-align">30 € <br> + 15 € / personne supplémentaire</p>
+        
+        <p>Shooting de nu <br> <span class="precisions">+ possibilité plusieurs personnes </span> <br> <span class=" mention">Shooting de 1 à 2h - 30 photos livrées sous 2 jours</span></p><p class="right-text-align">40 € <br> + 20 € / personne supplémentaire</p>
+
+        <p>Tirages papier <br> <span class="precisions">6 x 9 cm</span> <br> <span class="precisions">10 x 15 cm</span> <br> <span class="precisions">20 x 30 cm</span> <br> <span class="precisions">Autres tailles</span> <br> <span class="mention">2 jours ouvrés supplémentaires</span></p><p class="right-text-align"> <br> 1 € l'unité <br> 2 € l'unité <br> 5 € l'unité <br> Me contacter</p>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="container">
+    <h1>Envoyez-moi un p'tit mail !</h1>
+
+    <form (ngSubmit)="onSubmit()" #contactForm = "ngForm" class="contact-form" id="contactForm">
+        <div class="name-surname">
+            <div class="name">
+                <label for="nom">Nom* :</label>
+                <input type="text" id="nom" required [(ngModel)]="contact.nom" name="name" #name="ngModel">
+                <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error">
+                    Veuillez entrer votre nom.
+                </div>
+            </div>
+            <div class="name">
+                <label for="prenom">Prénom* :</label>
+                <input type="text" id="prenom" required [(ngModel)]="contact.prenom" name="surname" #surname="ngModel">
+                <div *ngIf="surname.invalid && (surname.dirty || surname.touched)" class="error">
+                    Veuillez entrer votre prénom.
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-input">
+            <label for="email">E-mail* :</label>
+            <input type="email" id="email" required [(ngModel)]="contact.email" name="email" #email="ngModel">
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
+                Veuillez entrer une adresse mail valide
+            </div>
+        </div>
+       
+        <div class="form-input">
+            <label for="objet">Objet* :</label>
+            <select id="objet" required [(ngModel)]="contact.objet" name="objet" #objet="ngModel">
+                <option value="" disabled selected>Sélectionnez un objet</option>
+                <option *ngFor="let objet of objets" [value]="objet">{{ objet }}</option>
+            </select>
+            <div *ngIf="objet.invalid && (objet.dirty || objet.touched)" class="error">
+            Veuillez indiquer l'objet de votre e-mail.
+            </div>
+        </div>
+
+        <div class="form-input">
+            <label for="message">Message :</label>
+            <textarea type="message" id="message" required [(ngModel)]="contact.message" name="message" #message="ngModel"></textarea>
+            <div *ngIf="message.invalid && (message.dirty || message.touched)" class="error">
+                Veuillez entrer un message.
+            </div>
+        </div>
+
+        <button class="btnBelow" type="submit" [disabled]="contactForm.invalid">Envoyer</button>
+    </form>
+</div>
