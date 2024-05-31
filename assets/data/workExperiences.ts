@@ -2,9 +2,33 @@ import { expTemplate } from "./experienceTemplate";
 
 export const workExperiences: expTemplate[] =[
     {
+        title: 'Autoformation au Développement Web',
+        date: '2024',
+        society: 'À domicile (mais plus souvent dans un café)',
+        description: `
+                        Autoformation sur des technologies de base du web
+                        <ul>
+                            <li><i class="devicon-html5-plain colored"></i> HTML, <i class="devicon-css3-plain colored"></i> CSS , <i class="devicon-javascript-plain colored"></i> Javascript</li>
+                            <li><i class="devicon-angularjs-plain colored"></i> Angular</li>
+                        </ul>
+                        <p>Création du site Web de l'Hotel Restaurant Prunières en <i class="devicon-html5-plain colored"></i> HTML, <i class="devicon-css3-plain colored"></i> CSS , <i class="devicon-javascript-plain colored"></i> Javascript</p>
+                        <p>Creation d'un Portfolio sous la forme d'une WebApp a l'aide de <i class="devicon-angularjs-plain colored"></i> Angular</p>
+                        <p>Initiation au versionnage et déploiement de mes projets</p>
+                        <ul>
+                            <li><i class="devicon-github-original colored"></i> GitHub et <i class="devicon-git-plain colored"></i> Git</li>
+                            <li><i class="devicon-firebase-plain colored"></i> Firebase</li>
+                        </ul>
+                        <p>Prévu</p>
+                        <ul>
+                            <li><i class="devicon-postgresql-plain colored"></i> PostgreSQL, <i class="devicon-nodejs-plain colored"></i> NodeJs</li>
+                            <li><i class="devicon-react-original colored"></i> React, <i class="devicon-vuejs-plain colored"></i> VueJs, <i class="devicon-wordpress-plain colored"></i> WordPress</li>
+                        </ul>
+                      `
+    },
+    {
         title: 'Stage en Développement Web',
         date: 'Avril 2024',
-        society: 'Evoluflor - Lyon -France',
+        society: 'Evoluflor - Lyon - France',
         description: `
                         Mise en place d’un environnement de travail et vérification des compatibilités.
                         <ul>
