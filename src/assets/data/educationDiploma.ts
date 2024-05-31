@@ -2,7 +2,7 @@ import { expTemplate } from "./experienceTemplate";
 
 export const educationDiploma: expTemplate[] = [
     {
-        title: 'Dcotorat en Sciences de la Terre',
+        title: 'Doctorat en Sciences de la Terre',
         date: 'Oct. 2020 - Sept. 2023',
         society: 'Université Clermont-Auvergne - Laboratoire Magmas et Volcans - Clermont-Ferrand - France',
     },
