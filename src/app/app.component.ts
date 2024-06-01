@@ -18,4 +18,14 @@ export class AppComponent implements OnInit{
       blob.style.height = (100 * Math.random()) + 25 + '%';
     });
   }
+
+  displayModal(value: boolean){
+    const navMobile = document.querySelector(".nav-mobile") as HTMLMenuElement;
+
+    if (!value) {
+      navMobile.classList.add("open");
+    } else {
+      navMobile.classList.remove("open")
+    }
+  }
 }

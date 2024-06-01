@@ -6,10 +6,25 @@
     display: grid;
     grid-template-columns: 40vw 60vw;
     
-    height: calc(100vh - 4.5rem);
-    transform: translateY(4.5rem);
+    height: calc(100vh + 4.5rem);
 
     color: $gris;
+
+            
+    & #bgPhotoHEROMobile{
+      position: absolute;
+
+      right: 5rem;
+      top: 10rem;
+
+      display: none;
+
+      height: 15rem;
+      aspect-ratio: 1;
+
+      object-fit: cover;
+      object-position: 0%;
+    }
     
     & #bgPhotoHERO{
       height: 100%;
@@ -24,6 +39,8 @@
       flex-direction: column;
 
       position: relative;
+
+      justify-content: center;
     
       padding-left: 5rem;
       padding-right: 10rem;
@@ -36,15 +53,7 @@
       
         justify-content: center;
       
-        margin-block: 10rem;
-      
         z-index: 1;
-
-        transform: translateY(5rem);
-        
-        & #bgPhotoHEROMobile{
-          display: none;
-        }
       }
     }
     
@@ -88,15 +97,15 @@
     }
 
     & .decoBig{
-    display: flex;
-    position: absolute;
+      display: flex;
+      position: absolute;
 
-    width: 240vh;
-    height: 240vh;
+      width: 240vh;
+      height: 240vh;
 
-    background-color: $orange;
+      background-color: $orange;
 
-    clip-path: polygon(12.5% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 12.5%, 6.25% 12.5%, 6.25% 6.25%, 12.5% 6.25%);
+      clip-path: polygon(12.5% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 12.5%, 6.25% 12.5%, 6.25% 6.25%, 12.5% 6.25%);
     }
 
     & .decoSmall{
@@ -127,42 +136,42 @@
 }
 
 .whoAmI{
-display: flex;
+  display: flex;
 
-align-items: center;
-justify-content: center;
+  align-items: center;
+  justify-content: center;
 
-color: $gris;
+  color: $gris;
 
-overflow: hidden;
-padding-inline: 5rem;
+  overflow: hidden;
+  padding-inline: 5rem;
 
-& .leftContainer{
-display: flex;
-flex-direction: column;
-justify-content: center;
+  & .leftContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-padding-inline: 2rem;
+    padding-inline: 2rem;
 
-text-align: center;
+    text-align: center;
 
-    & h1{
-        font-size: 10rem;
-    }
-}
+      & h1{
+          font-size: 10rem;
+      }
+  }
 
-& .middleContainer{
-display: flex;
-flex-direction: column;
-justify-content: center;
+  & .middleContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-text-align: justify;
-}
+    text-align: justify;
+  }
 
-& .bgPhotoHERO{
-object-fit: contain;
-height: 75vh;
-}
+  & .bgPhotoHERO{
+    object-fit: contain;
+    height: 75vh;
+  }
 
 }
 
@@ -176,3 +185,102 @@ height: 75vh;
     width: 85vw;
     height: 80vh;
 }
+
+//  Mobiles
+
+@media (max-width: 480px) {
+
+  h1{
+    font-size: 4.8rem !important;
+  }
+
+  .heroContainer{
+
+    h2{
+      width: 50vw;
+    }
+
+    #bgPhotoHERO{
+      display: none;
+    }
+
+    #bgPhotoHEROMobile{
+      display: flex;
+    }
+
+    .rightContainer{
+      width: 100vw;
+    }
+  }
+
+  .grid-container{
+    display:flex;
+    flex-direction: column;
+
+    gap: 0;
+
+    width: 100%;
+
+    h1{
+      width: 100%;
+      padding-top: 7rem;
+    }
+
+    .bgPhotoHERO{
+      padding-top: 3rem;
+
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+}
+//  Tablets
+
+@media (max-width: 840px) {
+
+  h1{
+    font-size: 4.8rem !important;
+  }
+
+  .heroContainer{
+
+    h2{
+      width: 50vw;
+    }
+
+    #bgPhotoHERO{
+      display: none;
+    }
+
+    #bgPhotoHEROMobile{
+      display: flex;
+    }
+
+    .rightContainer{
+      width: 100vw;
+    }
+  }
+  
+  .grid-container{
+    display:flex;
+    flex-direction: column;
+
+    gap: 0;
+
+    width: 100%;
+
+    h1{
+      width: 100%;
+      padding-top: 7rem;
+    }
+
+    .bgPhotoHERO{
+      
+      padding-top: 3rem;
+
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+}
+ 

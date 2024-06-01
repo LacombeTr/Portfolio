@@ -17,3 +17,63 @@
 .mention{
     padding-left: 2rem;
 }
+
+
+//  Mobiles
+
+@media (max-width: 480px) {
+
+    h1{
+        font-size: 4.8rem;
+    }
+
+    .container{
+        padding-inline: 4rem;
+    }
+    
+    .grid-container{
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        padding-inline: 3rem;
+    }
+
+    .photoCard{
+        width: 100%;
+    }
+
+    .grid-container-2{
+        margin-inline: 3rem;
+        grid-template-columns: 35vw 35vw;
+        gap: 5vw;
+    }
+}
+
+//  Tablets
+
+@media (max-width: 840px) {
+
+    h1{
+        font-size: 4.8rem;
+    }
+
+    .container{
+        padding-inline: 3rem;
+    }
+
+    .grid-container{
+        grid-template-columns: 40vw 40vw;
+        gap: 5vw;
+    }
+
+    .photoCard{
+        width: 100%;
+    }
+
+    .grid-container-2{
+        margin-inline: 3rem;
+        grid-template-columns: 40vw 40vw;
+        gap: 5vw;
+    }
+}

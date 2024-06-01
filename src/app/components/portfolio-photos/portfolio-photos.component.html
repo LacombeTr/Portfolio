@@ -1,7 +1,7 @@
 <div class="container">
     <h1>Photographie</h1>
     <div class="grid-container">
-        <div *ngFor="let photo of listPhoto" #photoCard (mouseenter)="hoverInCard(photoCard)" (mouseleave)="hoverOutCard(photoCard)" class="photoCard">
+        <div *ngFor="let photo of listPhoto" #photoCard (touchstart)="hoverInCard(photoCard)" (mouseenter)="hoverInCard(photoCard)" (touchend)="hoverOutCard(photoCard)" (mouseleave)="hoverOutCard(photoCard)" class="photoCard">
             <img [src]="photo.pic" class="bgImage">
             <div class="ligthener"></div>
             <div class="textContainer">

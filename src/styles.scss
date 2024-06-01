@@ -90,6 +90,13 @@ p{
     color: $orange;
 }
 
+h1{
+    .interest{
+        color: $orange;
+        -webkit-text-stroke: 1px $blanc;
+    }
+}
+
 .precisions{
     padding-left: 2rem;
 
@@ -338,6 +345,8 @@ p{
     font-size: 2.4rem;
     color: $gris;
 
+    outline: 1px solid $blanc;
+
     &:hover{
         background-color: transparent;
         color: $orange;
@@ -433,5 +442,29 @@ footer{
 
     img{
         height: 20px;
+    }
+}
+
+//  Mobiles
+
+@media (max-width: 480px) {
+    nav{
+        display: none;
+    }
+
+    .nav-mobile-trigger{
+        display: flex;
+    }
+}
+
+//  Tablets
+
+@media (max-width: 840px) {
+    nav{
+        display: none;
+    }
+
+    .nav-mobile-trigger{
+        display: flex;
     }
 }

@@ -125,3 +125,46 @@ textarea{
         border: solid 1px $orange;
     }
 }
+
+//  Mobiles
+
+@media (max-width: 480px) {
+
+    .contact-form{
+        width: 100%;
+    }
+
+    h1{
+        width: auto;
+        font-size: 4.8rem;
+    }
+
+    .container{
+        width: 100%;
+        padding-inline: 3.5rem;
+    }
+
+    h1{
+        font-size: 4.8rem;
+    }
+}
+
+//  Tablets
+
+@media (max-width: 840px) {
+
+    .contact-form{
+        width: 100%;
+    }
+
+    h1{
+        width: auto;
+        font-size: 4.8rem;
+    }
+    
+    .container{
+        width: 100%;
+        padding-inline: 3.5rem;
+    }
+}
+   

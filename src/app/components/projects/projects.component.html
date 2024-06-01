@@ -3,7 +3,7 @@
     <p>Quelques projets sur lesquels j'ai travaillé.</p>
     <div class="grid-container-2">
 
-        <div *ngFor="let project of projects" #cardFolio (mouseenter)="hoverInCardFolio(cardFolio)" (mouseleave)="hoverOutCardFolio(cardFolio)" class="portfolioCard">
+        <div *ngFor="let project of projects" #cardFolio (mouseenter)="hoverInCardFolio(cardFolio)" (touchstart)="hoverInCardFolio(cardFolio)" (mouseleave)="hoverOutCardFolio(cardFolio)" (touchend)="hoverOutCardFolio(cardFolio)" class="portfolioCard">
             <img class="bgImage" [src]="project.pic" alt="">
             <div class="ligthener"></div>
             <div class="textContainer">
